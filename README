@@ -1,0 +1,71 @@
+Some crude hacking on memory-training software.
+
+deck-player/: SuperMemo-2 algorithm on a deck in Anki import format
+
+deck-builder/: Tries to build a good deck automatically out of an
+aligned parallel corpus. Germ of a more specialized language-learning
+tool which maybe I'll tackle someday.
+
+
+Notes:
+
+What's great about Anki:
+
+* Useful learning in 10 minutes/day with no special effort. Beats TV!
+
+Shortcomings of Anki:
+
+* I tend not to learn a card well enough in its session, because it's
+  taken out of the rotation as soon as I recall it at all. So then by
+  the time it next comes up, I've forgotten it, instead of *almost*
+  forgotten it. Wozniak's scheme seems better.
+* 'Flat' sessions (e.g. consider what happens if you try learning 200
+  new cards/session).
+* Contributed decks are often ill-structured ('ashtray' first instead
+  of the most frequent & useful words).
+* Flashcards aren't much like the real-world tasks you're training
+  for. I don't know if this is a shortcoming, in net -- maybe the
+  greater focus of practice makes up for the greater abstraction --
+  but other more contextual schemes seem worth a try.
+* It has no way of knowing when I tend to confuse two words. In such
+  cases, I could use focused practice on distinguishing them.
+* Next showings 'in N hours' probably not useful, compared to daily
+  sessions.
+* Lumpy schedules -- later repetitions should get spread out over a
+  few days.
+* Not obviously well-engineered. (E.g. a huge directory of backups of
+  DB files. Thousands of lines of Python, not counting the UI. It's
+  hard to find the core logic in all that code.)
+* Someone has to build the decks.
+* It'd be helpful if it could notice when you're going about learning
+  in a suboptimal way, and advise you. For a start, it could
+  extrapolate your performance to your expected items/year per
+  minute/day, and compare to a benchmark. Likewise for forgetting
+  rate.
+
+
+http://www.mail-archive.com/kragen-tol@canonical.org/msg00243.html
+So can we test this theory? E.g. how much Spanish vocab could I learn
+in 4 hours by adapting sm2.py and my parallel-corpus deck? Then what's
+needed for retention?
+
+
+http://news.ycombinator.com/item?id=1603562
+http://www.fourhourworkweek.com/blog/2007/11/07/how-to-learn-but-not-master-any-language-in-1-hour-plus-a-favor/
+
+~/prama/python/darius/guesslanguage/parallel-corpora/leipzig/unpacked/se100k/words.txt
+
+http://llt.msu.edu/vol5num3/pdf/stjohn.pdf
+
+>  I'd like to see a program or website for learning a reading knowledge
+>  of French (or whatever), assuming you've previously learned a
+>  different foreign language like Spanish and don't need
+>  elaborately-structured lessons -- where you just allocate it, say, 15
+>  minutes a day, and it grows your vocabulary, etc., adaptively according
+>  to the time you give it, starting with the roughly most important
+>  stuff so you can get some benefit no matter how far you take it. Have
+>  you seen anything like that via your class? You could make a start at
+>  this sort of thing with a corpus of French text to get word
+>  frequencies, plus a French-English dictionary and an adaptive
+>  flashcard program. Of course that leaves out grammar and idioms and
+>  conversation.
