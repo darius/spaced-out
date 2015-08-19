@@ -5,6 +5,7 @@ http://www.supermemo.com/english/ol/sm2.htm
 The overall system is not quite clear; this is my interpretation.
 """
 
+from __future__ import print_function
 import itertools
 import json
 
